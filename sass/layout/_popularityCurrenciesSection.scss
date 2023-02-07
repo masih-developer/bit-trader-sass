@@ -1,0 +1,49 @@
+.popularity-currencies {
+    @extend .app-section;
+    color: $white-color;
+    background-color: #000;
+    text-align: center;
+
+    .popularity-currencies__box {
+        .popularity-currencies__circle {
+            @include flex(center, center);
+            width: 12rem;
+            height: 12rem;
+            padding: 2rem;
+            margin: 0 auto;
+
+            border: {
+                width: .8rem;
+                style: solid;
+                color: $white-color;
+                radius: 50%;
+                left-color: #333;
+            }
+
+
+            h4 {
+                font: {
+                    family: $medium-font;
+                    size: 3.5rem;
+                }
+
+                span {
+                    font: {
+                        family: $regular-font;
+                        size: 2rem;
+                    }
+
+                }
+            }
+        }
+
+        h5 {
+            margin-top: 2rem;
+
+            font: {
+                family: $medium-font;
+                size: 1.5rem;
+            }
+        }
+    }
+}

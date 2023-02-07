@@ -1,0 +1,48 @@
+.contact-us {
+    @extend .app-section;
+    text-align: center;
+
+    .contact-us__title {
+        @extend .section-title;
+        color: #000;
+    }
+
+    .contact-us__caption {
+        font: {
+            size: 1.5rem;
+            family: $medium-font;
+        }
+
+        margin: auto;
+        max-width: 55rem;
+    }
+
+    .contact-us__form {
+        margin-top: 5rem;
+
+        input,
+        textarea {
+            outline: unset;
+            border: .1rem solid #dddddd;
+            border-radius: .3rem;
+            transition: border .3s;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.6rem;
+
+            &:focus {
+                border-color: #000;
+            }
+        }
+
+        .contact-us__textarea {
+            min-height: 10rem;
+        }
+
+        .contact-us__submit-btn {
+            @extend .app-btn;
+            display: block;
+            margin: 5rem 0 0 auto;
+        }
+    }
+}

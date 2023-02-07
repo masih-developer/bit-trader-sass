@@ -1,0 +1,48 @@
+.about-us {
+    @extend .app-section;
+
+    background: {
+        image: url("../../assets/images/about-us-bg.jpg");
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+
+    .about-us__title {
+        @extend .section-title;
+        color: #000;
+        width: fit-content;
+        position: relative;
+        margin-bottom: 5rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -.5rem;
+            height: .15rem;
+            background-color: $yellow-color;
+        }
+    }
+
+    .about-us__subject {
+        font: {
+            family: $medium-font;
+            size: 2rem;
+        }
+
+        color: #000;
+        margin-bottom: 2rem;
+    }
+
+    .about-us__description {
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-us {
+        background-position: right;
+    }
+}

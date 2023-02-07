@@ -1,0 +1,38 @@
+.future-bitcoin {
+    @extend .app-section;
+    text-align: center;
+    color: $white-color;
+    background-color: #000;
+
+    .future-bitcoin__title {
+        @extend .section-title;
+
+        span {
+            color: $yellow-color;
+        }
+
+    }
+
+    .future-bitcoin__caption {
+        color: $white-color;
+        transition: .3s;
+        display: block;
+        max-width: 83rem;
+        margin: 3rem auto;
+
+        font: {
+            size: 2rem;
+            family: $medium-font;
+        }
+
+        &:hover {
+            color: $yellow-color;
+        }
+    }
+
+    .future-bitcoin__link-btn {
+        @extend .app-btn;
+        color: #fff;
+    }
+
+}

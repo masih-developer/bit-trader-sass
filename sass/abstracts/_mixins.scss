@@ -1,0 +1,16 @@
+@import "../abstracts/variables";
+
+@mixin flex($justify: flex-start, $align: flex-start) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($size: col) {
+    @for $i from 1 through $grid-column-count {
+        .#{$size}-#{$i} {
+            width: 8.33333333333% * $i;
+            flex: 0 0 auto;
+        }
+    }
+}

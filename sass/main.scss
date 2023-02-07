@@ -1,0 +1,109 @@
+// base directory
+@import "./base/reset";
+@import "./base/font";
+@import "./base/grid";
+
+// abstracts directory
+@import "./abstracts/variables";
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*::selection {
+    color: $white-color;
+    background-color: #000;
+}
+
+body {
+    color: $text-color;
+    font-size: 1.6rem;
+    font-family: $regular-font;
+    line-height: 1.5;
+}
+
+
+// reset styles
+a {
+    text-decoration: none
+}
+
+input,
+textarea,
+button {
+    font: {
+        family: $regular-font;
+    }
+}
+
+// helper classes
+.align-items-center {
+    align-items: center;
+}
+
+// and extends
+@import "./abstracts/extends";
+
+// import navbar codes
+@import "./layout/navbar";
+
+// import home section codes
+@import "./layout/homeSection";
+
+// import about us section codes
+@import "./layout/aboutUsSection";
+
+// import buy and sell section codes
+@import "./layout/buySellSection";
+
+// import why bitcoin section codes
+@import "./layout/whyBitCoinSection";
+
+// import popularity of currencies section codes
+@import "./layout/popularityCurrenciesSection";
+
+// import currency exchange section codes
+@import "./layout/currencyExchangeSection";
+// import currency exchange section codes
+@import "./layout/currencyExchangeSection";
+
+// import start work section codes
+@import "./layout/startWorkSection";
+
+// import our team section codes
+@import "./layout/ourTeamSection";
+
+// import support section codes
+@import "./layout/supportSection";
+
+// import currency news section codes
+@import "./layout/currencyNews";
+
+// import future of bitcoin section codes
+@import "./layout/futureOfBitcoin";
+
+// import contact us section codes
+@import "./layout/contactUsSection";
+
+// import footer codes
+@import "./layout/footer";
+
+// media queries for responsive
+@media only screen and (max-width: 1400px) {}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 576px) {}

@@ -1,0 +1,77 @@
+.currency-news {
+    @extend .app-section;
+    text-align: center;
+
+    .currency-news__title {
+        @extend .section-title;
+        color: #000;
+    }
+
+    .currency-news__caption {
+        max-width: 66rem;
+        margin: auto;
+
+        font: {
+            family: $medium-font;
+            size: 1.5rem;
+        }
+    }
+
+    .currency-news__slider {
+        margin-top: 5rem;
+
+        .currency-news__news {
+            text-align: right;
+
+            .currency-news__news__img {
+                display: block;
+                width: 100%;
+            }
+
+            .currency-news__news__content {
+                .currency-news__news__title {
+                    font: {
+                        size: 2.5rem;
+                        family: $medium-font;
+                    }
+
+                    margin: 2rem 0;
+                    max-width: 38rem;
+                    color: #000;
+                }
+
+                .currency-news__news__caption {
+                    font: {
+                        size: 1.5rem;
+                        family: $medium-font;
+                    }
+
+                    margin-bottom: 2rem;
+                }
+
+                .currency-news__news__details {
+                    @include flex(space-between, center);
+
+                    >div,
+                    >a {
+                        @include flex(center, center);
+                        gap: 1rem;
+                        color: $text-color;
+
+                        font: {
+                            family: $medium-font;
+                        }
+                    }
+
+                    .currency-news__news__more-details {
+                        transition: .3s;
+
+                        &:hover {
+                            color: $yellow-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

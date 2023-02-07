@@ -1,0 +1,19 @@
+@import "../abstracts/variables";
+
+@font-face {
+    font-family: $regular-font;
+    src: url(#{$main-font-url}/Vazirmatn-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: $medium-font;
+    src: url(#{$main-font-url}/Vazirmatn-Medium.ttf) format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: $bold-font;
+    src: url(#{$main-font-url}/Vazirmatn-Bold.ttf) format("truetype");
+    font-weight: normal;
+}

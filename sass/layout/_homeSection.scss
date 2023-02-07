@@ -1,0 +1,39 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../components/button";
+
+
+.home {
+    background: url("../images/home-bg.png");
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    @include flex(center, center);
+    color: $white-color;
+    text-align: center;
+
+    .home-wrapper {
+        @include flex(center, center);
+        flex-direction: column;
+
+        .home__title {
+            color: $yellow-color;
+
+            font: {
+                size: 5rem;
+                family: $bold-font;
+            }
+        }
+
+        .home__description {
+            max-width: 47rem;
+            margin-bottom: 3rem;
+        }
+
+        .home__link-btn {
+            @extend .app-btn;
+            color: $white-color;
+        }
+    }
+}

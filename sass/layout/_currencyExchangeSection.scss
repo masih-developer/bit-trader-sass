@@ -1,0 +1,85 @@
+.currency-exchange {
+    @extend .app-section;
+    text-align: center;
+
+    .currency-exchange__title {
+        @extend .section-title;
+        color: #000;
+        margin-bottom: 1rem;
+    }
+
+    .currency-exchange__caption {
+        font: {
+            size: 1.5rem;
+        }
+    }
+
+    .currency-exchange__table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+
+        .currency-exchange__table {
+            width: 100%;
+            text-align: right;
+            margin-top: 5rem;
+
+            tr,
+            td,
+            th {
+                white-space: nowrap;
+            }
+
+            th,
+            td {
+                padding: 1.5rem 1rem;
+            }
+
+            thead {
+                background-color: #333333;
+                color: $white-color;
+            }
+
+            tbody {
+
+                tr {
+                    td {
+                        border-bottom: .1rem solid #dddddd;
+                        vertical-align: middle;
+
+                        &:first-child div {
+                            @include flex(flex-start, center);
+                            gap: 1rem;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &:first-child img {
+                            object-fit: contain;
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        background-color: #f9f9f9;
+                    }
+
+                    &:last-child td {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    .currency-exchange__table-wrapper {
+        .currency-exchange__table {
+
+            th,
+            td {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

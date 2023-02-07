@@ -1,0 +1,88 @@
+@import "../abstracts/variables";
+
+.app-btn {
+    border: none;
+    padding: 0;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+    z-index: 0;
+    color: #000;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.6rem;
+
+    >span {
+        padding: 1.3rem 4rem;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: $yellow-color;
+            transition: .3s;
+            height: 50%;
+            width: .2rem;
+        }
+
+        &::before {
+            height: 50%;
+            width: .2rem;
+        }
+
+        &::after {
+            width: 20%;
+            height: .2rem;
+        }
+
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: $yellow-color;
+        transition: .3s;
+        height: 50%;
+        width: .2rem;
+    }
+
+    &::before {
+        height: 50%;
+        width: .2rem;
+    }
+
+    &::after {
+        width: 20%;
+        height: .2rem;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &:hover::before {
+        height: 100%;
+    }
+
+    &:hover span::after {
+        width: 100%;
+    }
+
+    &:hover span::before {
+        height: 100%;
+    }
+
+}

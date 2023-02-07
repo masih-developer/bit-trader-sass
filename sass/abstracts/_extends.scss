@@ -1,0 +1,23 @@
+.app-section {
+    padding: 10rem 0;
+}
+
+.section-title {
+    font: {
+        family: $medium-font;
+        size: 4rem;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .app-section {
+        padding: 5rem 0;
+    }
+
+    .section-title {
+        font: {
+            size: 3rem;
+        }
+    }
+
+}

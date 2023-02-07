@@ -1,0 +1,186 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2rem 0;
+    width: 100%;
+    z-index: 10000;
+
+    .nav-wrapper {
+        @include flex(space-between, center);
+
+        .nav__bar-icon {
+            border: none;
+            outline: none;
+            display: none;
+            padding: 0;
+            overflow: hidden;
+            background-color: unset;
+            color: $white-color;
+            cursor: pointer;
+
+            svg {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        .nav__list-wrapper {
+            @include flex;
+            flex-direction: column;
+            transition: .3s;
+
+            .nav__list {
+                width: 100%;
+                @include flex(center, center);
+
+                .nav__item {
+                    margin-left: 2rem;
+
+                    .nav__link {
+                        display: block;
+                        color: $white-color;
+                        transition: .3s;
+
+                        &:hover {
+                            color: $yellow-color;
+                        }
+                    }
+
+                    .nav__link--active {
+                        color: $yellow-color;
+                    }
+
+                    &:last-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .nav__close-icon {
+                @extend .nav__bar-icon;
+            }
+
+        }
+
+        .nav__list--show {
+            right: 0 !important;
+        }
+
+        .nav__logo {
+            display: block;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+
+}
+
+.nav--active {
+    animation: showNav .4s forwards !important;
+    padding: 1.5rem 0 !important;
+
+    .nav-wrapper {
+        .nav__logo {
+            width: 17rem;
+        }
+    }
+}
+
+
+// animation for show navbar
+@keyframes showNav {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.8);
+        top: 0;
+        position: fixed;
+    }
+
+}
+
+
+
+// responsive
+
+@media only screen and (max-width: 1400px) {}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 992px) {
+    .nav {
+        .nav__logo {
+            max-width: 15rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        .nav-wrapper {
+            .nav__bar-icon {
+                display: block !important;
+            }
+
+            .nav__list-wrapper {
+                position: fixed;
+                top: 0;
+                right: -30rem;
+                bottom: 0;
+                width: 30rem;
+                background-color: #000;
+                min-height: 100vh;
+                z-index: 1000;
+                max-width: 100%;
+
+                .nav__list {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    .nav__item {
+                        width: 100%;
+                        margin: 0;
+
+                        .nav__link {
+                            padding: 1rem;
+                            width: 100%;
+
+                            &:hover {
+                                background-color: $yellow-color;
+                                color: #000;
+                            }
+                        }
+
+                        .nav__link--active {
+                            background-color: $yellow-color;
+                            color: #000 !important;
+                        }
+                    }
+                }
+
+
+                .nav__close-icon {
+                    margin: 2rem 0 2rem 1rem;
+                    align-self: flex-end;
+                }
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 576px) {}
